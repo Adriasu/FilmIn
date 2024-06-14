@@ -55,22 +55,39 @@ import { movies } from "./data.js";
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 
-const copyOfMovies = [].concat(movies);
-function orderByYear(array) {
-  array.sort((a, b) => {
-    if (a.year < b.year) return -1;
-    if (a.year > b.year) return 1;
-    else {
-      if (a.title < b.title) return -1;
-      if (a.title > b.title) return 1;
-      return 0;
-    }
-  });
-  return array;
-}
-console.log(orderByYear(copyOfMovies));
+// const copyOfMovies = [].concat(movies);
+// function orderByYear(array) {
+//   array.sort((a, b) => {
+//     if (a.year < b.year) return -1;
+//     if (a.year > b.year) return 1;
+//     else {
+//       if (a.title < b.title) return -1;
+//       if (a.title > b.title) return 1;
+//       return 0;
+//     }
+//   });
+//   return array;
+// }
+// console.log(orderByYear(copyOfMovies));
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
+
+// const copyOfMoviesTwo = [].concat(movies);
+
+// function orderAlphabetically(array) {
+//   array.sort(function (a, b) {
+//     if (a.title < b.title) return -1;
+//     if (a.title > b.title) return 1;
+//     return 0;
+//   });
+//   const firstTenMovies = array.slice(0, 10);
+//   const firstTenNamesMovies = firstTenMovies.map((name) => {
+//     return name.title;
+//   });
+//   return firstTenNamesMovies
+// }
+
+// console.log(orderAlphabetically(copyOfMoviesTwo));
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
 
