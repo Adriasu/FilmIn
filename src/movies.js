@@ -4,14 +4,25 @@ import { movies } from "./data.js";
 
 // const getAllDirectors = (array) => {
 //   const allDirectors = array.map((directors) => {
-//      return directors.director;
+//     return directors.director;
 //   });
 //   return allDirectors;
-// }
-// console.log(getAllDirectors(movies));
+// };
 
-// _Bonus_: It seems some of the directors had directed multiple movies so they will pop up multiple times in the array of directors.
-// How could you "clean" a bit this array and make it unified (without duplicates)?
+// const allDirectors = getAllDirectors(movies);
+// console.log(allDirectors);
+
+// // _Bonus_: It seems some of the directors had directed multiple movies so they will pop up multiple times in the array of directors.
+// // How could you "clean" a bit this array and make it unified (without duplicates)?
+
+// const directorsNotRepeated = allDirectors.reduce((acc, director) => {
+//   if (!acc.includes(director)) {
+//     acc.push(director);
+//   }
+//   return acc;
+// }, []);
+
+// console.log(directorsNotRepeated);
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct?
 
