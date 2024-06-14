@@ -1,6 +1,6 @@
 import { movies } from "./data.js";
 
-// Iteration 1: All directors? - Get the array of all directors. // Iteración 1: ¿Todos los directores? - Obtener el array de todos los directores.
+// Iteration 1: All directors? - Get the array of all directors.
 
 // const getAllDirectors = (array) => {
 //   const allDirectors = array.map((directors) => {
@@ -19,7 +19,7 @@ import { movies } from "./data.js";
 //   const dramaStevenSpielbergMovies = array.filter((directordrama) => {
 //     return (
 //       directordrama.director.toLowerCase() === "steven spielberg" &&
-//       directordrama.genre.includes("Drama") === true
+//       directordrama.genre.includes("Drama")
 //     );
 //   });
 //   return dramaStevenSpielbergMovies
@@ -29,18 +29,46 @@ import { movies } from "./data.js";
 
 // Iteration 3: All scores average - Get the average of all scores with 2 decimals
 
-function scoresAverage(array) {
-  const averageSum = array.reduce((acc, prom) => {
-    return acc + prom.score;
-  }, 0);
-  let average = averageSum / array.length;
-  return average.toFixed(2);
-}
-console.log(scoresAverage(movies));
+// function scoresAverage(array) {
+//   const averageSum = array.reduce((acc, prom) => {
+//     return acc + prom.score;
+//   }, 0);
+//   let average = averageSum / array.length;
+//   return average.toFixed(2);
+// }
+// console.log(scoresAverage(movies));
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
 
+// function dramaMoviesScore(array) {
+//   const dramaMovies = array.filter((genreDrama) => {
+//     return genreDrama.genre.includes("Drama") === true;
+//   });
+//   const averageDramaSum = dramaMovies.reduce((acc, prom) => {
+//     return acc + prom.score;
+//   }, 0);
+//   let averageDrama = (averageDramaSum / dramaMovies.length).toFixed(2);
+//   return `El promedio de las peliculas de drama es ${averageDrama}`;
+// }
+
+// console.log(dramaMoviesScore(movies));
+
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
+
+const copyOfMovies = [].concat(movies);
+function orderByYear(array) {
+  array.sort((a, b) => {
+    if (a.year < b.year) return -1;
+    if (a.year > b.year) return 1;
+    else {
+      if (a.title < b.title) return -1;
+      if (a.title > b.title) return 1;
+      return 0;
+    }
+  });
+  return array;
+}
+console.log(orderByYear(copyOfMovies));
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 
