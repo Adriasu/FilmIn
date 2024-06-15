@@ -53,7 +53,7 @@ import { movies } from "./data.js";
 
 // function dramaMoviesScore(array) {
 //   const dramaMovies = array.filter((genreDrama) => {
-//     return genreDrama.genre.includes("Drama") === true;
+//     return genreDrama.genre.includes("Drama");
 //   });
 //   const averageDramaSum = dramaMovies.reduce((acc, prom) => {
 //     return acc + prom.score;
@@ -101,5 +101,14 @@ import { movies } from "./data.js";
 // console.log(orderAlphabetically(copyOfMoviesTwo));
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
+
+// function turnHoursToMinutes(array) {
+//   array.forEach((time) => {
+//     return time.duration = parseInt((time.duration.charAt((time.duration.indexOf('h')-1))*60)) + 
+//     parseInt(time.duration.slice(time.duration.indexOf('m')-2, time.duration.indexOf('m')))
+//   })
+//   return array
+// }
+// console.log(turnHoursToMinutes(movies));
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
