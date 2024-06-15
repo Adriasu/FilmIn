@@ -112,3 +112,24 @@ import { movies } from "./data.js";
 // console.log(turnHoursToMinutes(movies));
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
+
+function bestYearAvg(array) {
+
+  const yearAvg = array.reduce((acc, years) => {
+    //let yearsAverage = years.year 
+
+    if (acc[years.year]) {
+      acc[years.year].push(years.score)
+    } else {
+      acc[years.year] = [years.score]
+    }
+    return acc
+  },{})  
+
+  console.log(yearAvg);
+
+}
+
+console.log(bestYearAvg(movies));
+
+
