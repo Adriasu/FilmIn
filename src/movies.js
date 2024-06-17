@@ -104,7 +104,7 @@ import { movies } from "./data.js";
 
 // function turnHoursToMinutes(array) {
 //   array.forEach((time) => {
-//     return time.duration = parseInt((time.duration.charAt((time.duration.indexOf('h')-1))*60)) + 
+//     return time.duration = parseInt((time.duration.charAt((time.duration.indexOf('h')-1))*60)) +
 //     parseInt(time.duration.slice(time.duration.indexOf('m')-2, time.duration.indexOf('m')))
 //   })
 //   return array
@@ -113,23 +113,22 @@ import { movies } from "./data.js";
 
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
 
-function bestYearAvg(array) {
-
-  const yearAvg = array.reduce((acc, years) => {
-    //let yearsAverage = years.year 
-
-    if (acc[years.year]) {
-      acc[years.year].push(years.score)
-    } else {
-      acc[years.year] = [years.score]
-    }
-    return acc
-  },{})  
-
-  console.log(yearAvg);
-
-}
-
-console.log(bestYearAvg(movies));
-
-
+// function bestYearAvg(array) {
+//   const yearsAvarage = array.reduce((acc, movie) => {
+//     acc[movie.year] = acc[movie.year] || { sumScore: 0, count: 0 };
+//     acc[movie.year].sumScore += movie.score;
+//     acc[movie.year].count++;
+//     return acc;
+//   }, {});
+//   const result = Object.keys(yearsAvarage).map((year) => ({
+//     year,
+//     avarageScore: (yearsAvarage[year].sumScore / yearsAvarage[year].count).toFixed(2),
+//   }));
+//   result.sort((a,b) => {
+//     if (a.avarageScore < b.avarageScore) return 1
+//     if (a.avarageScore > b.avarageScore) return -1
+//     return 0
+//   })
+//   return `El mejor año fue ${result[0].year} con una puntuación media de ${result[0].avarageScore}.`
+// }
+// console.log(bestYearAvg(movies));
